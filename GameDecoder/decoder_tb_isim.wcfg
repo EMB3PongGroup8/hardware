@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="E:/Documents/GitHub/EMB3_ping_pong/GameDecoder/decoder_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="decoder_tb" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_unsigned" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="8" />
+   <wvobject fp_name="/decoder_tb/clk_pixel" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_pixel</obj_property>
+      <obj_property name="ObjectShortName">clk_pixel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/decoder_tb/hsync" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">hsync</obj_property>
+      <obj_property name="ObjectShortName">hsync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/decoder_tb/pixel_val" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">pixel_val</obj_property>
+      <obj_property name="ObjectShortName">pixel_val</obj_property>
+   </wvobject>
+   <wvobject fp_name="/decoder_tb/vsync" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">vsync</obj_property>
+      <obj_property name="ObjectShortName">vsync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/decoder_tb/rightbatvpos" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rightbatvpos[8:0]</obj_property>
+      <obj_property name="ObjectShortName">rightbatvpos[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/decoder_tb/leftbatvpos" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">leftbatvpos[8:0]</obj_property>
+      <obj_property name="ObjectShortName">leftbatvpos[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/decoder_tb/ballvpos" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ballvpos[8:0]</obj_property>
+      <obj_property name="ObjectShortName">ballvpos[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/decoder_tb/ballhpos" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ballhpos[9:0]</obj_property>
+      <obj_property name="ObjectShortName">ballhpos[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>
