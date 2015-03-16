@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="E:/Documents/GitHub/hardware/MedianFilter/medianFilter_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="medianfilter_tb" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="7" />
+   <wvobject fp_name="/medianfilter_tb/clk_pixel" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_pixel</obj_property>
+      <obj_property name="ObjectShortName">clk_pixel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/medianfilter_tb/green_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">green_i[9:0]</obj_property>
+      <obj_property name="ObjectShortName">green_i[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/medianfilter_tb/red_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">red_i[9:0]</obj_property>
+      <obj_property name="ObjectShortName">red_i[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/medianfilter_tb/blue_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">blue_i[9:0]</obj_property>
+      <obj_property name="ObjectShortName">blue_i[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/medianfilter_tb/pixel_val_o" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">pixel_val_o</obj_property>
+      <obj_property name="ObjectShortName">pixel_val_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/medianfilter_tb/uut/pixel_val" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">pixel_val</obj_property>
+      <obj_property name="ObjectShortName">pixel_val</obj_property>
+   </wvobject>
+   <wvobject fp_name="/medianfilter_tb/uut/kernel" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">kernel[4:0]</obj_property>
+      <obj_property name="ObjectShortName">kernel[4:0]</obj_property>
+   </wvobject>
+</wave_config>
