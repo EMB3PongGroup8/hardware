@@ -40,7 +40,14 @@
 *_summary.xml
 *_usage.xml
 *_xst.xrpt
-
+# simulation files
+*.ini
+*.exe
+*.ngc
+*.cmd
+*.log
+*.wdb
+*.xmsgs
 # project-wide generated files
 *.gise
 par_usage_statistics.html
@@ -54,3 +61,4 @@ xlnx_auto_0_xdb/
 xst/
 _ngo/
 _xmsgs/
+isim/
