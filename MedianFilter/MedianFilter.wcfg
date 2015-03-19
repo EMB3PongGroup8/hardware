@@ -11,7 +11,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="7" />
+   <WVObjectSize size="11" />
    <wvobject fp_name="/medianfilter_tb/clk_pixel" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">clk_pixel</obj_property>
       <obj_property name="ObjectShortName">clk_pixel</obj_property>
@@ -42,5 +42,21 @@
    <wvobject fp_name="/medianfilter_tb/uut/kernel" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">kernel[4:0]</obj_property>
       <obj_property name="ObjectShortName">kernel[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/medianfilter_tb/vsync_i" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">vsync_i</obj_property>
+      <obj_property name="ObjectShortName">vsync_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/medianfilter_tb/hsync_i" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">hsync_i</obj_property>
+      <obj_property name="ObjectShortName">hsync_i</obj_property>
+   </wvobject>
+   <wvobject fp_name="/medianfilter_tb/hsync_o" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">hsync_o</obj_property>
+      <obj_property name="ObjectShortName">hsync_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/medianfilter_tb/vsync_o" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">vsync_o</obj_property>
+      <obj_property name="ObjectShortName">vsync_o</obj_property>
    </wvobject>
 </wave_config>

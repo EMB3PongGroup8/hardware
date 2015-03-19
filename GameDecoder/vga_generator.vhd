@@ -130,8 +130,8 @@ architecture Behavioral of vga_generator is
 	-- top-right corner @(329,230)    -> plus offset -> (473,265) 
 	-- bottom-left corner @(310,249)  -> plus offset -> (454,284) 
 	-- bottom-right corner @(329,249) -> plus offset -> (473,284)
-	constant C_BALL_X1 : integer := 310;
-	constant C_BALL_X2 : integer := 329;
+	signal C_BALL_X1 : integer := 310;
+	signal C_BALL_X2 : integer := 329;
 	constant C_BALL_Y1 : integer := 230;
 	constant C_BALL_Y2 : integer := 249;
 
@@ -185,6 +185,10 @@ begin
 		if rising_edge(pxl_clk) then		
 			pixel_cnt_reg <= pixel_cnt_nxt;
 			line_cnt_reg <= line_cnt_nxt;
+--			if(line_cnt_reg = "0000000000" and pixel_cnt_reg = "0000000000") then
+--				C_BALL_X1 <= C_BALL_X1 + 30;
+--				C_BALL_X2 <= C_BALL_X2 + 30;
+--			end if;
 		end if;
 	end process;
 	

@@ -1,0 +1,12 @@
+[Inputs]
+pixel_clk
+=red[9:0]=
+=green[9:0]=
+=blue[9:0]=
+[Outputs]
+Hsync
+Vsync
+=R[2:0]=
+=G[2:0]=
+=B[2:0]=
+[BiDir]

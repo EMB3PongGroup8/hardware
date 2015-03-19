@@ -39,15 +39,20 @@ ARCHITECTURE behavior OF medianFilter_tb IS
  
     -- Component Declaration for the Unit Under Test (UUT)
  
-    COMPONENT MedianFilter
-    PORT(
-         CLK_pixel : IN  std_logic;
-         green_i : IN  std_logic_vector(9 downto 0);
-         red_i : IN  std_logic_vector(9 downto 0);
-         blue_i : IN  std_logic_vector(9 downto 0);
-         pixel_val_o : OUT  std_logic
-        );
-    END COMPONENT;
+	COMPONENT MedianFilter
+	PORT(
+		CLK_pixel : IN std_logic;
+		Vsync_i : IN std_logic;
+		Hsync_i : IN std_logic;
+		adc_red : IN std_logic_vector(9 downto 0);
+		adc_green : IN std_logic_vector(9 downto 0);
+		adc_blue : IN std_logic_vector(9 downto 0);          
+		pixel_val_o : OUT std_logic;
+		Vsync_o : OUT std_logic;
+		Hsync_o : OUT std_logic;
+		adc_clk : OUT std_logic_vector(2 downto 0)
+		);
+	END COMPONENT;
     
 
    --Inputs
@@ -55,7 +60,11 @@ ARCHITECTURE behavior OF medianFilter_tb IS
    signal green_i : std_logic_vector(9 downto 0) := (others => '0');
    signal red_i : std_logic_vector(9 downto 0) := (others => '0');
    signal blue_i : std_logic_vector(9 downto 0) := (others => '0');
-
+	signal Vsync_i : std_logic;
+	signal Hsync_i : std_logic;
+	signal Hsync_o : std_logic;
+	signal Vsync_o : std_logic;
+	signal adc_clk : std_logic_vector(2 downto 0);
  	--Outputs
    signal pixel_val_o : std_logic;
 
@@ -64,14 +73,19 @@ ARCHITECTURE behavior OF medianFilter_tb IS
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
-   uut: MedianFilter PORT MAP (
-          CLK_pixel => CLK_pixel,
-          green_i => green_i,
-          red_i => red_i,
-          blue_i => blue_i,
-          pixel_val_o => pixel_val_o
-        );
-
+	uut: MedianFilter PORT MAP(
+		CLK_pixel => CLK_pixel,
+		pixel_val_o => pixel_val_o,
+		Vsync_i => Vsync_i,
+		Hsync_i => Hsync_i,
+		Vsync_o => Vsync_o,
+		Hsync_o => Hsync_o,
+		adc_clk => adc_clk,
+		adc_red => red_i,
+		adc_green => green_i,
+		adc_blue => blue_i
+	);
+	
 		-- pixel clock generator
 	process
 	begin
@@ -88,20 +102,26 @@ BEGIN
       -- hold reset state for 100 ns.
 
       wait for G_PXL_CLK_PRD;
-		green_i <= (others => '1');
-		red_i <= (others => '1');
-		blue_i <= (others => '1');
+		green_i <= (others => '0');
+		red_i <= (others => '0');
+		blue_i <= (others => '0');
+		Vsync_i <= '0';
+		Hsync_i <= '0';
 		wait for G_PXL_CLK_PRD*2;
 		green_i <= (others => '0');
 		red_i <= (others => '0');
 		blue_i <= (others => '0');
+		Vsync_i <= '0';
+		Hsync_i <= '0';
 		wait for G_PXL_CLK_PRD*2;
 		green_i <= (others => '1');
 		red_i <= (others => '1');
 		blue_i <= (others => '1');
+		Vsync_i <= '1';
+		Hsync_i <= '1';
 		wait for G_PXL_CLK_PRD*10;
       -- insert stimulus here 
-
+		
       -- wait;
    end process;
 
